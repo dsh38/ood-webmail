@@ -1,0 +1,26 @@
+
+<configuration>
+
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <!--
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+                -->
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%d %-4relative [%thread] %-5level %logger{35} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+    
+    <!--
+    <logger name="deu.se.spring_jsp" level="debug">
+        <appender-ref ref="consoleAppender"/>
+    </logger>
+    -->
+
+    <root level="debug">
+        <appender-ref ref="consoleAppender"/>
+    </root>
+
+</configuration>
